@@ -120,22 +120,21 @@ public class GestorReservas
                 }
             }
         }
+        List<IServicioAdicionalStrategy> serviciosSeleccionados = new List<IServicioAdicionalStrategy>();
 
         if (conCatering)
         {
-            subtotal = subtotal + (8500m * sala.Capacidad);
+            serviciosSeleccionados.Add(new ServicioCateringStrategy());
         }
 
         if (conProyector)
         {
-            if (cliente.Tipo == "CORPORATIVO" && horas >= 4)
-            {
-                subtotal = subtotal + 0m;
-            }
-            else
-            {
-                subtotal = subtotal + 15000m;
-            }
+            serviciosSeleccionados.Add(new ServicioProyectorStrategy());
+        }
+
+        foreach (var servicio in serviciosSeleccionados)
+        {
+            subtotal = subtotal + servicio.CalcularCosto(cliente, sala, horas);
         }
 
         if (fecha.DayOfWeek == DayOfWeek.Saturday || fecha.DayOfWeek == DayOfWeek.Sunday)
