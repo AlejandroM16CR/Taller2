@@ -19,3 +19,18 @@ public class ServicioProyectorStrategy : IServicioAdicionalStrategy
         return 15000m;
     }
 }
+public class ServicioSonidoStrategy : IServicioAdicionalStrategy
+{
+    public decimal CalcularCosto(Cliente cliente, Sala sala, int horas)
+    {
+         if (cliente.Tipo == "ESTUDIANTIL" )
+        {
+            return 10000m;
+        } else 
+        {
+            return 20000m;
+        }
+       
+    }
+}
+
