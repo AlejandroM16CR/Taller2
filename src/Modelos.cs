@@ -27,6 +27,7 @@ public class Reserva
     public int Horas;
     public bool ConCatering;
     public bool ConProyector;
+    public bool ConSonido;
     public decimal Subtotal;
     public decimal Impuesto;
     public decimal Total;

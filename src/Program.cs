@@ -13,19 +13,19 @@ public class Program
         Console.WriteLine("=== Sistema de reservas de salas de eventos ===");
         Console.WriteLine();
 
-        Console.WriteLine(gestor.CrearReserva(1, 1, martes, 9, 3, false, true, "TEXTO"));
+        Console.WriteLine(gestor.CrearReserva(1, 1, martes, 9, 3, false, true, false, "TEXTO"));
         Console.WriteLine();
 
-        Console.WriteLine(gestor.CrearReserva(2, 3, martes, 13, 8, true, true, "TEXTO"));
+        Console.WriteLine(gestor.CrearReserva(2, 3, martes, 13, 8, true, false,true,  "TEXTO"));
         Console.WriteLine();
 
-        Console.WriteLine(gestor.CrearReserva(3, 1, martes.AddDays(1), 14, 4, false, false, "JSON"));
+        Console.WriteLine(gestor.CrearReserva(3, 1, martes.AddDays(1), 14, 4, false, false,false, "JSON"));
         Console.WriteLine();
 
-        Console.WriteLine(gestor.CrearReserva(4, 2, sabado, 8, 6, true, false, "HTML"));
+        Console.WriteLine(gestor.CrearReserva(4, 2, sabado, 8, 6, true, false,false,"HTML"));
         Console.WriteLine();
 
-        Console.WriteLine(gestor.CrearReserva(1, 1, martes, 10, 2, false, false, "TEXTO"));
+        Console.WriteLine(gestor.CrearReserva(1, 1, martes, 10, 2, false, false,true, "TEXTO"));
         Console.WriteLine();
 
         Console.WriteLine(gestor.ReporteDelDia(martes, "TEXTO"));

@@ -26,7 +26,7 @@ public class GestorReservas
 
     // Crea la reserva: valida, calcula, guarda en archivo y devuelve el comprobante.
     public string CrearReserva(int clienteId, int salaId, DateTime fecha, int horaInicio, int horas,
-                               bool conCatering, bool conProyector, string formatoComprobante)
+                               bool conCatering, bool conProyector, bool conSonido, string formatoComprobante)
     {
         // ---- validaciones ----
         Cliente cliente = null;
@@ -131,6 +131,10 @@ public class GestorReservas
         {
             serviciosSeleccionados.Add(new ServicioProyectorStrategy());
         }
+        if (conSonido)
+        {
+            serviciosSeleccionados.Add(new ServicioSonidoStrategy());
+        }
 
         foreach (var servicio in serviciosSeleccionados)
         {
@@ -162,6 +166,7 @@ public class GestorReservas
             Horas = horas,
             ConCatering = conCatering,
             ConProyector = conProyector,
+            ConSonido = conSonido,
             Subtotal = Math.Round(subtotal, 2),
             Impuesto = Math.Round(impuesto, 2),
             Total = Math.Round(total, 2),

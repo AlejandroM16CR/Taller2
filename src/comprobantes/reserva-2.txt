@@ -1,7 +1,7 @@
 COMPROBANTE DE RESERVA #2
 Cliente: Constructora del Este
 Sala: Auditorio
-Fecha: 03/11/2026 de 13:00 por 8 horas
-Subtotal: 2927291,20
-Impuesto: 380547,86
-TOTAL: 3307839,06
+Fecha: 10/11/2026 de 13:00 por 8 horas
+Subtotal: 1672291.20
+Impuesto: 217397.86
+TOTAL: 1889689.06
